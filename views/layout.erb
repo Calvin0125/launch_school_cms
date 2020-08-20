@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta chareset="UTF-8">
+  <title>CMS</title>
+  <link rel="stylesheet" href="/stylesheets/cms.css">
+  <link rel="icon" href = "/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <style>
+    form.inline {
+      display: inline;
+    }
+  </style>
+  <% if session[:message] %>
+    <p class="message"><%= session.delete(:message) %></p>
+  <% end %>
+  <%= yield %>
+</body>
